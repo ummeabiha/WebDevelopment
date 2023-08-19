@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 30px;
+            align-items: center;
+            color: black;
+            background-color: bisque;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+            background-color: rgb(245, 143, 245);
+            color: azure;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <p><input type="text" placeholder="type something" id="id1"></p><br>
+    <button type="submit" onclick="debit1()">Debit</button><br>
+    <button type="submit" onclick="credit1()">Credit</button><br>
+    <script>
+        class atm {
+            constructor(accountNo, accountHolderName, balance) {
+                this.accountNo = accountNo;
+                this.accountHolderName = accountHolderName;
+                this.balance = balance;
+            }
+
+            getbalance() {
+                return this.balance;
+            }
+
+            setbalance(amount) {
+                this.balance = amount;
+            }
+
+            debit(amount) {
+                return this.balance - amount;
+            }
+
+            credit(amount) {
+                return this.balance + amount;
+            }
+
+            display() {
+                document.write("You have opened an account")
+            }
+
+            showdata() {
+                return "<br>" + this.accountNo + "<br>" + this.accountHolderName + "<br>" + this.balance;
+            }
+        }
+
+        const atm1 = new atm(1002, "Abdullah", 20000);
+        atm1.display();
+        document.write("Account details are \n" + atm1.showdata());
+
+        function debit1() {
+            let money = document.getElementById("id1").value;
+            let d1 = parseInt(money);
+            let d2=atm1.debit(d1);
+            window.alert("The updated balance is " + d2);
+        }
+
+        function credit1() {
+            let money = document.getElementById("id1").value;
+            let d1 = parseInt(money);
+            let d2=atm1.credit(d1);
+            window.alert("The updated balance is " + d2);
+        }
+    </script>
+
+
+</body>
+
+</html>

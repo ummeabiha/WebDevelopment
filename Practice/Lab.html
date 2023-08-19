@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(a,b){
+            document.getElementById("p1").innerHTML=a+b;
+        }
+
+        function sub(a,b){
+            document.getElementById("p2").innerHTML=a-b;
+        }
+
+        function mul(a,b){
+            document.getElementById("p3").innerHTML=a*b;
+        }
+
+        function divide(a,b){
+            document.getElementById("p4").innerHTML=a/b;
+        }
+        
+    </script>
+</head>
+
+<body>
+    <p style="color:white; background-color:rgb(255, 126, 126); height:50px;" id="p1"></p><br>
+    <p style="color:black; background-color:rgb(255, 255, 83); height:50px;" id="p2"></p><br>
+    <p style="color:white; background-color:rgb(150, 150, 249); height:50px;" id="p3"></p><br>
+    <p style="color:black; background-color:rgb(161, 255, 161); height:50px;" id="p4"></p><br>
+    
+    <script>
+        // let opr=(prompt("Enter Operator"));
+        let a=parseInt(prompt("Enter First Number"));
+        let b=parseInt(prompt("Enter Second Number"));
+
+    </script>
+
+    <button value="add" onclick=sum(a,b)> Add </button>
+    <button value="subtract" onclick=sub(a,b)> Subtract </button>
+    <button value="multiply" onclick=mul(a,b)> Multiply </button>
+    <button value="divide" onclick=divide(a,b)> Divide </button>
+
+    
+</body>
+
+</html>

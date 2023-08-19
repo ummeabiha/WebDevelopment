@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel and Random</title>
+    <button onclick="Vowel()">Vowel</button>
+    <button onclick="Random()">Random</button>
+</head>
+
+<body>
+    <script>
+        let Vowel = () => {
+            let char = ['a', 'b', 'c', 'i'];
+            let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+            for (var i = 0; i < char.length; i++) {
+                let vowDiv = document.createElement('div');
+                if (vowels.includes(char[i])) {
+                    vowDiv.innerText = char[i] + " is a vowel.";
+                } else {
+                    vowDiv.innerText = char[i] + " is a consonant.";
+                }
+                document.body.appendChild(vowDiv);
+            }
+        }
+
+        let Random = () => {
+            for (var i = 0; i <= 20; i++) {
+                let ranDiv = document.createElement("div");
+                let ranTxt = document.createTextNode(Math.random());
+                ranDiv.appendChild(ranTxt);
+                document.body.appendChild(ranDiv);
+            }
+        } 
+    </script>
+</body>
+
+</html>

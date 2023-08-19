@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>GourmetGusto</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Carattere&family=Dosis&family=Great+Vibes&family=Lovers+Quarrel&family=Major+Mono+Display&family=Mea+Culpa&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200&family=Passions+Conflict&family=Righteous&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 400;
+        color: #fff;
+        scroll-behavior: smooth;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        background-image: url(../images/bg.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        gap: 125px;
+    }
+
+    .temp {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 25px;
+    }
+
+    #logo h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #ffa600;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 550;
+    }
+
+    h1,
+    #title h1 span {
+        font-family: 'Righteous', cursive;
+        letter-spacing: 2px;
+        text-shadow: 1px 1.5px rgba(35, 33, 33, 0.923);
+    }
+
+    #title h1 {
+        text-align: center;
+        text-shadow: 3px 3px #000000;
+        line-height: 75px;
+        font-size: 65px;
+        letter-spacing: 7px;
+    }
+
+    #title h1 span {
+        color: #ffa600;
+        font-family: 'Mea Culpa', cursive;
+        font-size: 45px;
+        text-shadow: 3px 3px #0f0f0f;
+    }
+
+    #content {
+        line-height: 25px;
+        width: 63vw;
+        text-align: center;
+        font-size: 17.2px;
+    }
+
+    #content p {
+        text-shadow: 1px black;
+    }
+
+    #registered {
+        text-decoration: none;
+        color: #ffa600;
+    }
+
+    .btn {
+        text-decoration: none;
+        border: none;
+        border-radius: 12px;
+        background-color: #ffa600e6;
+        color: #fffafa;
+        font-size: 18px;
+        margin-top: 10px;
+        padding: 7px 9px;
+        text-align: center;
+        text-shadow: 1px 0.5px #0f0f0f;
+    }
+
+    .btn:hover {
+        background-color: transparent;
+        cursor: pointer;
+        border: 2px inset #ffa600;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        padding: 20px 135px;
+        font-size: 20px;
+    }
+
+    #navlist ul {
+        display: flex;
+        gap: 45px;
+        list-style: none;
+    }
+
+    #navlist ul li a,
+    .shop-icon-link {
+        text-decoration: none;
+    }
+
+    #navlist ul li a:hover {
+        border-bottom: 1px solid #fbb83cf3;
+    }
+
+
+    /* About Start*/
+    .aboutus {
+        width: 80%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .about-sub-sec {
+        display: flex;
+        width: 80%;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-sub-sec2 {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 80%;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .about-sub-sec img {
+        height: 200px;
+        width: 300px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+
+    .about-sub-sec2 img {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+
+    .aboutus p span {
+        color: #ffa600;
+    }
+    /* About End */
+
+    /* Shop Start */
+    .shop,
+    .about,
+    .contact {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        background-color: #000000d5;
+        padding: 0px 0px 100px;
+        gap: 30px;
+    }
+
+    
+    .about h1 {
+        padding: 70px 0px 30px;
+        font-size: 40px;
+    }
+
+    .shop h1{
+        margin-top: -20px;
+        font-size: 40px;
+    }
+    .shop .btn {
+        border-radius: 0px;
+    }
+
+    .shop .btn:hover {
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .shop-sub-sec1 {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 20px;
+    }
+
+    .shop-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        width: 230px;
+        height: 250px;
+        border-radius: 10px;
+        padding: 10px 0px;
+        filter: brightness(1);
+    }
+
+    #shop-img1 {
+        background-image: url(../images/burger.jpg);
+    }
+
+    #shop-img2 {
+        background-image: url(../images/Lasgna.jpg);
+    }
+
+    #shop-img3 {
+        background-image: url(../images/Fried\ Rice.jpg);
+    }
+
+    #shop-img4 {
+        background-image: url(../images/pasta.jpg);
+    }
+
+    #shop-img5 {
+        background-image: url(../images/pie.jpg);
+    }
+
+    #shop-img6 {
+        background-image: url(../images/pizza.jpg);
+    }
+
+    #shop-img7 {
+        background-image: url(../images/cake.jpg);
+    }
+
+    #shop-img8 {
+        background-image: url(../images/salad.jpg);
+    }
+
+    .shop-item {
+        display: flex;
+        flex-direction: column;
+        width: 230px;
+        border-radius: 14px;
+        background-color: #131313;
+        border: 4px solid #fbb83cf3;
+        margin-top: 40px;
+    }
+
+    .tag-name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        padding: 10px 15px 0px;
+    }
+
+    .price {
+        display: flex;
+        gap: 5px;
+        font-size: 18px;
+    }
+
+    .shop-img .star {
+        color: #fff;
+    }
+    /* Shop End */
+
+
+    /* Contact Start */
+    .contact-form {
+        display: flex;
+        padding: 20px;
+        border: 4px solid #fbb83cf3;
+        border-radius: 40px;
+        background-image: url("../images/contact-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .contact-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-body h1 {
+        color: #fff;
+        text-shadow: 1px 0.5px #949191;
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+    .contact-fields {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: space-between;
+        font-size: 18px;
+        gap: 20px;
+    }
+
+    .contact-fields span {
+        margin-right: 6px;
+    }
+
+    .contact-fields #email span {
+        margin-right: 8px;
+    }
+
+    .contact-fields #contact span {
+        margin-right: 3px;
+    }
+
+    .contact-fields input {
+        background-color: #232323ef;
+        color: #fff;
+        border-radius: 20px;
+        border: 2px solid #ffa600;
+        padding: 5px;
+        width: 560px;
+    }
+
+    .contact-fields textarea {
+        background-color: #232323ef;
+        color: #fff;
+        border: 2px solid #ffa600;
+        border-radius: 20px;
+    }
+    /* Contact End */
+
+    /* Footer Start */
+    .footer {
+        display: flex;
+        background-image: url(../images/footer-bg.jpg);
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+    }
+
+    .footer-sub {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 20px;
+        border-bottom: 2px solid #949191;
+        flex-wrap: wrap;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        gap: 10px;
+    }
+
+    .footer-left #logo h1 {
+        font-size: 24px;
+    }
+
+    .footer-center,
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: center;
+        gap: 10px;
+    }
+
+    .footer-right {
+        width: 300px;
+    }
+
+    .footer h2 {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 800;
+        color: #fbb83cf3;
+        text-shadow: 2px 3px #000000;
+    }
+
+    .icons {
+        display: flex;
+        gap: 20px;
+    }
+
+    .icons img,
+    .subs img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .subs {
+        display: flex;
+        border: 2px solid #ffa600;
+        width: fit-content;
+    }
+
+    .subs input {
+        background-color: transparent;
+        border: none;
+        padding: 2px;
+        width: 180px;
+    }
+
+    #copyright {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 83%;
+        padding: 10px;
+        gap: 2px;
+    }
+
+    #copyright span,
+    i {
+        color: #ffc559c5;
+    }
+    /* Footer End */
+</style>
+<html>
+
+<body>
+    <section class="home">
+        <div class="navbar">
+            <div id="logo">
+                <h1>GourmetGusto</h1>
+            </div>
+
+            <div id="navlist">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="temp">
+            <div class="head">
+                <div id="title">
+                    <h1> Gourmet Gusto <br><span>Where Fine Dining Takes on a New Gusto</span></h1>
+                </div>
+
+                <div id="content">
+                    <p>Embark on a culinary adventure at GourmetGusto, where passion and palate converge. Our expert
+                        chefs craft unforgettable dining experiences, showcasing culinary excellence with the finest
+                        ingredients and innovative techniques. Indulge in the essence of epicurean pleasures at
+                        GourmetGusto, elevating your gastronomic journey.
+                    </p>
+                </div>
+
+                <a href="#" target="_blank"><button class="btn">Order Now</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1>ABOUT US</h1>
+        <div class="about-sub-sec">
+            <div class="aboutus">
+                <p>
+                    At <span>Gourmet Gusto</span>, we believe that dining is an art form, and our passionate team of
+                    chefs and
+                    hospitality professionals are dedicated to creating culinary masterpieces that tantalize your taste
+                    buds and ignite your senses. Our menu is a testament to our commitment to sourcing only the finest,
+                    freshest ingredients, meticulously prepared to showcase their natural flavors.</p>
+                <p>
+                    From innovative dishes that push the boundaries of culinary creativity to classic favorites that
+                    evoke a sense of nostalgia, our menu caters to diverse palates and preferences. Each dish is crafted
+                    with precision and presented with elegance, promising a symphony of tastes and textures that will
+                    leave you craving for more.
+                </p>
+            </div>
+            <img src="../images/resturant.jpg" alt="image">
+        </div>
+
+        <div class="about-sub-sec2">
+            <div class="aboutus">
+                <p>Beyond the extraordinary cuisine, our attentive and knowledgeable staff is here to ensure that every
+                    moment
+                    of your dining experience is exceptional. Whether you're celebrating a special occasion, enjoying a
+                    romantic
+                    dinner, or simply seeking a delightful culinary adventure, we strive to exceed your expectations and
+                    create
+                    cherished memories.
+                </p>
+
+                <p>
+                    Step into our inviting dining space, designed to create a welcoming atmosphere where you can relax,
+                    unwind,
+                    and immerse yourself in the pleasure of good food and great company. We also offer private dining
+                    options
+                    for intimate gatherings or corporate events, tailored to your specific needs and preferences.
+                </p>
+
+                <p>
+                    Thank you for choosing <span>Gourmet Gusto</span>. We look forward to taking you on an unforgettable
+                    culinary
+                    journey,
+                    where every bite is an exploration of flavors, and every visit is a celebration of food, love, and
+                    togetherness.
+                </p>
+            </div>
+            <img src="../images/resturant2.jpg" alt="image">
+        </div>
+    </section>
+
+
+    <section class="shop" id="shop">
+        <div>
+            <h1>SHOP</h1>
+        </div>
+        <div class="shop-sub-sec1">
+            <div class="shop-sub-sec2">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img1">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Burger</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>800</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="shop-sub-sec">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img2">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Lasgna</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>1800</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="shop-sub-sec">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img3">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Fried Rice</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>1200</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="shop-sub-sec">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img4">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Pasta</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>1800</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="shop-sub-sec">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img5">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Berry Pie</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>800</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="shop-sub-sec">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img6">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Pizza</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>2000</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="shop-sub-sec">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img7">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Cake</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>1450</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="shop-sub-sec">
+                <div class="shop-item">
+                    <div class="shop-img" id="shop-img8">
+                        <div class="stars">
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star</i>
+                            <i class="material-icons star">star_half</i>
+                        </div>
+                    </div>
+
+                    <div class="tag-name">
+                        <h2>Fruit Salad</h2>
+                        <div class="price">
+                            <i class="material-icons star">sell</i>
+                            <span>650</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-form">
+            <div class="contact-body">
+                <div>
+                    <h1 class="contact-title"> CONTACT US </h1>
+                </div>
+
+                <div class="contact-fields">
+                    <div id="name">
+                        <span>Name</span>
+                        <input type="text" placeholder="Enter Your Name">
+                    </div>
+                    <div id="email">
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="username@gmail.com">
+                    </div>
+                    <div id="contact">
+                        <span>Phone</span>
+                        <input type="text" name="contactno" placeholder="Enter Your Cell Number (Optional)">
+                    </div>
+                    <div>
+                        <textarea id="review" name="review" rows="10" cols="87"
+                            placeholder="Enter Your Reviews/Queries"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="btn" value="Submit"> Submit
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-sub">
+            <div class="footer-left">
+                <div id="logo">
+                    <h1>GourmetGusto</h1>
+                </div>
+                <div class="icons">
+                    <a href="ummeabiha.2004@gmail.com" target="_blank">
+                        <img src="../Eyetistic/images/gmail.png" alt="gmail">
+                    </a>
+                    <a href="https://www.facebook.com/ummeabiha.2004" target="_blank">
+                        <img src="../Eyetistic/images/fb.png" alt="fb">
+                    </a>
+                    <a href="https://www.instagram.com/umm.e.abiha/" target="_blank">
+                        <img src="../Eyetistic/images/insta.png" alt="insta">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <h2>Contact Us</h2>
+                <div>
+                    <p>gourmetgusto@outlook.com</p>
+                </div>
+                <div>
+                    <p>123 Street, Karachi, Pakistan.</p>
+                </div>
+                <div>
+                    <span>+923131111111</span>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h2>Subscribe</h2>
+                <div>
+                    <p>Enter your email to get notified about our premium offers and updates.</p>
+                </div>
+                <div class="subs">
+                    <input placeholder="username@gmail.com">
+                    <img src="../Eyetistic/images/gmail.png" alt="gmail">
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <i class="material-icons star">copyright</i>
+            <span>2023 GourmetGusto Inc. all rights reserved</span>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // HEAD START
+        document.body.style.margin = '0';
+        document.body.style.padding = '0';
+        document.body.style.fontFamily = 'Nunito Sans';
+        document.body.style.color = 'white';
+
+        let nav = document.createElement('div');
+        nav.appendChild(document.createTextNode("HOME ABOUTUS CONTACT BOOKONLINE"));
+        nav.style.backgroundColor = '#03254c';
+        nav.style.textShadow = '1px #1b5886';
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'row-reverse';
+        nav.style.justifyContent = 'space-evenly';
+        nav.style.alignItems = 'center';
+        nav.style.wordSpacing = '20px';
+        nav.style.width = '100%';
+        nav.style.padding = '12px 0px';
+
+        let navlog = document.createElement('span');
+        let navimg = document.createElement('img');
+        navlog.appendChild(document.createTextNode("Login"));
+        navimg.src = '../images/login.png';
+        navimg.style.width = '30px';
+        navlog.style.display = 'flex';
+        navlog.style.alignItems = 'center';
+        navlog.style.flexDirection = 'row-reverse';
+        navlog.style.gap = '10px';
+        navlog.appendChild(navimg);
+
+        let navlogo = document.createElement('span');
+        navlogo.appendChild(document.createTextNode('FAREED&CO'));
+        navlogo.appendChild(document.createElement('br'));
+        navlogo.appendChild(document.createTextNode('REALESTATE'));
+        navlogo.style.display = 'flex';
+        navlogo.style.alignItems = 'center';
+        navlogo.style.gap = '60px';
+
+        navlogo.appendChild(navlog);
+        nav.appendChild(navlogo);
+        document.body.appendChild(nav);
+
+        let cover = document.createElement('div');
+        let coverimg = document.createElement('img');
+        coverimg.style.zIndex = '-1';
+        coverimg.src = "../images/bgDom.png";
+        coverimg.style.width = "100%";
+        coverimg.style.height = "100vh";
+        cover.style.position = 'relative';
+        cover.appendChild(coverimg);
+        document.body.appendChild(cover);
+
+        let contact = document.createElement('span');
+        contact.appendChild(document.createTextNode('Call Us: 123-414-4190'));
+        contact.style.backgroundColor = '#03254c';
+        contact.style.height = 'fit-content';
+        contact.style.padding = '8px';
+        contact.style.right = '340px';
+        contact.style.top = '40px';
+        contact.style.position = 'absolute';
+        contact.style.opacity = '0.9';
+        cover.appendChild(contact);
+
+        let content = document.createElement('span');
+        content.appendChild(document.createTextNode('STUNNING 6 BED APPARTMENT IN THE HEART OF THE CITY'));
+        content.appendChild(document.createElement('br'));
+        content.appendChild(document.createElement('br'));
+        content.appendChild(document.createTextNode('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s.'));
+        content.appendChild(document.createElement('hr'));
+        content.style.height = 'fit-content';
+        content.style.width = '200px';
+        content.style.padding = '20px';
+        content.style.backgroundColor = '#03254c';
+        content.style.position = 'absolute';
+        content.style.wordSpacing = '5px';
+        content.style.textAlign = 'left';
+        content.style.opacity = '0.9';
+        content.style.left = '250px';
+        content.style.top = '400px';
+
+        let p = document.createElement('span');
+        p.appendChild(document.createTextNode('$2,000,000'));
+        p.style.margin = '10px 60px';
+        content.appendChild(p);
+
+        let conbtn = document.createElement('button');
+        conbtn.appendChild(document.createTextNode('ALL VALUES'));
+        conbtn.style.padding = '5px';
+        conbtn.style.margin = '10px 53.5px 0px';
+
+        content.appendChild(conbtn);
+        cover.appendChild(content);
+        // HEAD END
+
+        // BODY START
+        let sale = document.createElement('div');
+        sale.style.color = '#03254c';
+        sale.style.height = '920px';
+        sale.style.textAlign = 'center';
+        sale.style.paddingTop = '125px';
+
+        let salesub = document.createElement('div');
+        salesub.style.display = 'flex';
+        salesub.style.flexDirection = 'column';
+        salesub.style.justifyContent = 'space-between';
+        salesub.style.gap = '60px';
+
+        let saleh1 = document.createElement('span');
+        saleh1.appendChild(document.createTextNode('LATEST PROPERTIES FOR SALE'));
+        saleh1.style.fontWeight = '600';
+        saleh1.style.fontSize = '24px';
+        salesub.appendChild(saleh1);
+
+        let salesub2 = document.createElement('div');
+        salesub2.style.display = 'flex';
+        salesub2.style.gap = '50px';
+        salesub2.style.justifyContent = 'center';
+        salesub2.style.alignContent = 'center';
+        salesub2.style.alignItems = 'center';
+        salesub2.style.textAlign = 'left';
+
+        let s1 = document.createElement('div');
+        s1img = document.createElement('img');
+        s1img.src = "../images/1.png";
+        s1img.style.width = '200px';
+        s1img.style.height = '220px';
+        s1.appendChild(s1img);
+
+        let s1txt = document.createElement('span');
+        s1txt.appendChild(document.createTextNode('OWN AVENUE'));
+        s1txt.style.fontWeight = '800';
+        s1.appendChild(s1txt);
+        s1.appendChild(document.createElement('br'));
+        s1.appendChild(document.createTextNode('$1,000,000'));
+        s1.appendChild(document.createElement('br'));
+        s1.appendChild(document.createElement('br'));
+        s1.appendChild(document.createTextNode('4 Properties'));
+        s1.appendChild(document.createElement('br'));
+        s1.appendChild(document.createElement('br'));
+        s1.appendChild(document.createTextNode('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'));
+        s1.appendChild(document.createElement('br'));
+        s1.appendChild(document.createElement('br'));
+        s1.style.width = '200px';
+
+        let s1btn = document.createElement('button');
+        s1btn.appendChild(document.createTextNode('Read More'));
+        s1btn.style.padding = '5px';
+        s1btn.style.color = 'white';
+        s1btn.style.backgroundColor = '#03254c';
+        s1btn.style.marginTop = '10px';
+        s1.appendChild(s1btn);
+
+        let s2 = document.createElement('div');
+        s2img = document.createElement('img');
+        s2img.src = "../images/2.png";
+        s2img.style.width = '200px';
+        s2img.style.height = '220px';
+        s2.appendChild(s2img);
+
+        let s2txt = document.createElement('span');
+        s2txt.appendChild(document.createTextNode('QUEENS WAY'));
+        s2txt.style.fontWeight = '800';
+        s2.appendChild(s2txt);
+
+        s2.appendChild(document.createElement('br'));
+        s2.appendChild(document.createTextNode('$2,000,000'));
+        s2.appendChild(document.createElement('br'));
+        s2.appendChild(document.createElement('br'));
+        s2.appendChild(document.createTextNode('5 Properties'));
+        s2.appendChild(document.createElement('br'));
+        s2.appendChild(document.createElement('br'));
+        s2.appendChild(document.createTextNode('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'));
+        s2.appendChild(document.createElement('br'));
+        s2.appendChild(document.createElement('br'));
+        s2.style.width = '200px';
+
+        let s2btn = document.createElement('button');
+        s2btn.appendChild(document.createTextNode('Read More'));
+        s2btn.style.padding = '5px';
+        s2btn.style.color = 'white';
+        s2btn.style.backgroundColor = '#03254c';
+        s2btn.style.marginTop = '10px';
+        s2.appendChild(s2btn);
+
+        let s3 = document.createElement('div');
+        s3img = document.createElement('img');
+        s3img.src = "../images/3.png";
+        s3img.style.width = '200px';
+        s3img.style.height = '220px';
+        s3.appendChild(s3img);
+
+        let s3txt = document.createElement('span');
+        s3txt.appendChild(document.createTextNode('RANDALL CLOSE'));
+        s3txt.style.fontWeight = '800';
+        s3.appendChild(s3txt);
+
+        s3.appendChild(document.createElement('br'));
+        s3.appendChild(document.createTextNode('$2,000,000'));
+        s3.appendChild(document.createElement('br'));
+        s3.appendChild(document.createElement('br'));
+        s3.appendChild(document.createTextNode('6 Properties'));
+        s3.appendChild(document.createElement('br'));
+        s3.appendChild(document.createElement('br'));
+        s3.appendChild(document.createTextNode('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'));
+        s3.appendChild(document.createElement('br'));
+        s3.appendChild(document.createElement('br'));
+        s3.style.width = '200px';
+
+        let s3btn = document.createElement('button');
+        s3btn.appendChild(document.createTextNode('Read More'));
+        s3btn.style.padding = '5px';
+        s3btn.style.color = 'white';
+        s3btn.style.backgroundColor = '#03254c';
+        s3btn.style.marginTop = '10px';
+        s3.appendChild(s3btn);
+
+        salesub2.appendChild(s1);
+        salesub2.appendChild(s2);
+        salesub2.appendChild(s3);
+        salesub.appendChild(salesub2);
+
+        let saleh2 = document.createElement('span');
+        saleh2.appendChild(document.createTextNode('LATEST RENTAL PROPERTIES'));
+        saleh2.style.fontWeight = '600';
+        saleh2.style.fontSize = '24px';
+        salesub.appendChild(saleh2);
+        sale.appendChild(salesub);
+        document.body.appendChild(sale);
+        // BODY END
+
+        // FOOTER START
+        let footer = document.createElement('div');
+        footer.style.backgroundColor = '#03254c';
+        footer.style.width = '100%';
+        footer.style.padding = '10px 0px 10px';
+        footer.style.position = 'relative';
+
+        fcon = document.createElement('div');
+        fcon.appendChild(document.createTextNode('CHASE AVENUE'));
+        fcon.appendChild(document.createElement('br'));
+        fcon.appendChild(document.createElement('br'));
+        fcon.appendChild(document.createTextNode('4 Bedrooms'));
+        fcon.appendChild(document.createElement('br'));
+        fcon.appendChild(document.createElement('br'));
+        fcon.appendChild(document.createTextNode('Lorem Ipsum is simply dummy text of the printing and typesetting industry.'));
+        fcon.style.margin = '0px 640px';
+        fcon.style.width = '280px';
+
+        fimg = document.createElement('img');
+        fimg.src = "../images/4.png";
+        fimg.style.width = '180px';
+        fimg.style.position = 'absolute';
+        fimg.style.top = '-28px';
+        fimg.style.left = '420px';
+
+        footer.appendChild(fimg);
+        footer.appendChild(fcon);
+        document.body.appendChild(footer);
+        // FOOTER END
+
+    </script>
+</body>
+
+</html>

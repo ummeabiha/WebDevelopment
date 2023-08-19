@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(brandName, priceNew, color, odometer) {
+                this.brandName = brandName;
+                this.priceNew = priceNew;
+                this.color = color;
+                this.odometer = odometer;
+            }
+
+            getPriceAfterUse() {
+                return ((this.priceNew) * (1 - (this.odometer / 600000)));
+            }
+
+            updateMileage(traveledDistance) {
+                this.odometer = this.odometer + traveledDistance;
+            }
+
+            outputDetails() {
+                document.write(this.brandName + "<br>" + this.priceNew + "<br>" + this.getPriceAfterUse() + "<br>" + this.color + "<br>" + this.odometer);
+            }
+        }
+
+        let car = new Car('Corolla', 200000, 'Black', 11456);
+        car.outputDetails();
+
+
+    </script>
+
+</body>
+
+</html>

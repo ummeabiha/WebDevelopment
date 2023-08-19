@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <script>
+       let d1=document.createElement('div');
+       let d1txt=document.createTextNode("Section A,Software Dept");
+       d1.style.backgroundColor="red";
+       d1.style.color="white";
+       d1.style.width="200px";
+       d1.style.height="600px";
+       d1.style.marginRight="20px";
+       d1.style.float="right";
+       d1.appendChild(d1txt);
+       
+       let d2=document.createElement('div');
+       let d2txt=document.createTextNode("Web Engineering");
+       d2.style.backgroundColor="red";
+       d2.style.color="white";
+       d2.style.width="200px";
+       d2.style.height="600px";
+       d2.style.float="right";
+       d2.style.marginRight="20px";
+       d2.appendChild(d2txt);
+
+
+       let d3=document.createElement('div');
+       let d3txt=document.createTextNode("Javascript and DOM");
+       d3.style.backgroundColor="red";
+       d3.style.color="white";
+       d3.style.width="200px";
+       d3.style.float="right";
+       d3.style.height="600px";
+       d3.style.marginRight="20px";
+       d3.appendChild(d3txt);
+       document.body.appendChild(d1);
+       document.body.appendChild(d2);
+       document.body.appendChild(d3);
+    </script>
+
+
+</body>
+</html>
+<script>
+            let d1=document.createElement('div');
+            // let d1txt=document.createTextNode("The Medicine Company");
+            d1.style.textAlign="right";
+            d1.style.backgroundColor="red";
+            d1.style.color="black";
+            d1.style.width=100
+            let img1=document.createElement('img');
+            img1.src='m3.jpg';
+            //img1.align="left";
+            img1.style.width=200;
+            d1.classList.add('domclass1');
+            d1.classList.add('domclass2');
+            d1.id="domid1";
+            d1.appendChild(img1);
+            d1.appendChild(d1txt);
+            let d2=document.createElement('div');
+            // let d2txt=document.createTextNode("The Medicine Company");
+            let img2=document.createElement('img');
+            img2.src='m1.jpg';
+            img2.style.width=180;
+            d2.style.backgroundColor="blue";
+            d2.style.color="black";
+            //d2.style.width=100;
+            let d3=document.createElement('div');
+            d3.style.backgroundColor="grey";
+            d3.style.color="black";
+            d3.style.width=100
+            //d3.style.height=900
+            d3.style.padding="40px"
+            d3.style.top="70px"
+            let d4=document.createElement('div');
+            let s=document.createElement('h1');
+            let s1=document.createTextNode("The Medicine Company");
+            let img3=document.createElement('img');
+            img3.src='m3.jpg';
+            img3.style.width=80;
+            s.appendChild(s1);
+            d4.style.backgroundColor="blue";
+            d4.style.color="black";
+            d4.style.width="400px"
+            d4.style.height="200px"
+            d4.style.marginLeft="400px"
+            d4.style.left="10px";
+            //d4.style.padding="30px";
+            d4.appendChild(s);
+            d4.appendChild(img3);
+            let b1=document.createElement('button');
+            b1.type="button";
+            b1.innerHTML="Home";
+             b1.style.backgroundColor="yellow";
+             b1.style.color="black";
+             b1.style.left="10px";
+             b1.style.width="200px";
+             let b2=document.createElement('button');
+            b2.type="button";
+            b2.innerHTML="Products";
+             b2.style.backgroundColor="yellow";
+             b2.style.color="black";
+             b2.style.width="200px";
+             b2.style.left="10px";
+             let b3=document.createElement('button');
+             b3.type="button";
+             b3.innerHTML="About us";
+             b3.style.paddingLeft="10px";
+             b3.style.backgroundColor="yellow";
+             b3.style.color="black";
+             b3.style.width="200px";
+             b3.style.margin="10px";
+             d2.appendChild(img2);
+            d2.appendChild(d2txt);
+            d3.appendChild(b1);
+            d3.appendChild(b2);
+            d3.appendChild(b3);
+            d3.appendChild(d4);
+           
+            document.body.appendChild(d1);
+            document.body.appendChild(d2);
+            document.body.appendChild(d3);
+          
+        </script>
+    </body>
+</html>
+   
+

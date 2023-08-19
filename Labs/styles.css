@@ -1,0 +1,40 @@
+table td{
+    padding:4px;
+}
+
+table tr a, .sec a{
+    text-decoration:none;
+    color:black;
+}
+
+#header, #head{
+    text-align: center;
+}
+
+.sec{
+    display:flex;
+    justify-content: space-between;
+    width:680px;
+}
+
+.main{
+    flex-direction:column;
+    align-content:space-between;
+}
+
+.ac{
+    justify-content:center;
+}
+
+#head td{
+    background-color: #0072BB; 
+    color:#fff;
+    padding: 4px;
+}
+
+button{
+    background-color: #ADD8E6;
+    border:1.5px solid #0072BB;
+    width:170px;
+}
+

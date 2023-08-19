@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(a,b){
+            const add=a+b;
+            const sub=a-b;
+            const prod=a*b;
+            const div=a/b;
+            const trig=Math.sin(a)+Math.cos(b);
+            const sqrt=Math.sqrt(a)-Math.sqrt(b);
+            return[add,sub,prod,div,trig,sqrt];  //returning array
+        }
+
+        //destruct assignment (declaring array as we're returning array from function)
+        [add1,sub1,prod1,div1,trig1,sqrt1]=calculate(16,25);
+        document.write("<p>Sum: "+add1+"</p>");
+        document.write("<p>Difference: "+sub1+"</p>");
+        document.write("<p>Product: "+prod1+"</p>");
+        document.write("<p>Division: "+div1+"</p>");
+        document.write("<p>Trignometric Operation: "+trig1+"</p>");
+        document.write("<p>Square Root Operation: "+sqrt1+"</p>");
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Design and Dev Course</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Carattere&family=Dosis&family=Great+Vibes&family=Lovers+Quarrel&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200&family=Righteous&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    .template {
+        display: flex;
+        flex-direction: column;
+        background-image: url(../images/bg2.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        gap: 100px;
+    }
+
+    .temp {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        gap: 25px;
+    }
+
+    .login_form {
+        display: flex;
+        border: 3px solid #ffa600;
+        height: 350px;
+        width: 275px;
+        justify-content: center;
+        align-content: center;
+        border-radius: 20px;
+        box-shadow: 3px 2.5px rgb(33, 33, 33);
+    }
+
+    .login_form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .login_form input {
+        color: black;
+        text-align: center;
+        width: 200px;
+        height: 20px;
+        border-radius: 20px;
+    }
+
+    #logo h1 {
+        font-size: 24px;
+        color: #ffa600;
+    }
+
+    h1, #title h1 span{
+        font-family: 'Righteous', cursive;
+        letter-spacing: 2px;
+        text-shadow: 1px 1.5px rgba(35, 33, 33, 0.923);
+    }
+
+    #title h1 {
+        line-height: 65px;
+        font-size: 45px;
+    }
+
+    h1 span {
+        color: #ffa600;
+        font-size: 55px;
+    }
+
+    #content {
+        line-height: 23px;
+        width: 54vw;
+        text-align: justify;
+    }
+
+    #content p {
+        text-shadow: 1px black;
+    }
+
+    #registered {
+        text-decoration: none;
+        color: #ffa600;
+    }
+
+    .btn {
+        border: none;
+        border-radius: 10px;
+        background-color: #ffa600;
+        color: #fff;
+        width: 90px;
+        height: 35px;
+        font-size: 15px;
+        text-shadow: 1px 0.5px #ed3c07;
+    }
+
+    .btn:hover {
+        background-color: transparent;
+        cursor: pointer;
+        border: 2px inset #ffa600;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        padding: 20px 135px;
+        font-size: 18px;
+    }
+
+    #navlist ul {
+        display: flex;
+        gap: 45px;
+        list-style: none;
+    }
+
+    #navlist ul li a {
+        text-decoration: none;
+    }
+
+    #navlist ul li a:hover {
+        box-shadow: 0.7px 0.5px #fffefe;
+        border: 1px solid #ffa600;
+        border-radius: 10px;
+        padding: 4px 8px;
+    }
+
+    #search {
+        display: flex;
+        border: 2px solid #ffa600;
+        width: fit-content;
+    }
+
+    #search input {
+        color: black;
+        text-align: center;
+        height: 35px;
+        width: 180px;
+        border: none;
+    }
+
+    #search .btn {
+        border-radius: 0px;
+    }
+</style>
+<html>
+
+<body>
+    <div class="template">
+        <div class="navbar">
+            <div id="logo">
+                <h1>PARAZOR</h1>
+            </div>
+
+            <div id="navlist">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div id="search">
+                <input type="text" placeholder="Type to Text">
+                <a href="#" target="_blank"><button class="btn">Search</button></a>
+            </div>
+
+        </div>
+
+        <div class="temp">
+            <div class="head">
+                <div id="title">
+                    <h1> Web Design & <br><span>Development</span><br>Course</h1>
+                </div>
+
+                <div id="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem unde libero, id amet deleniti
+                        saepe
+                        cupiditate dolorum quae! Quibusdam voluptate non aliquid ipsa in quidem! Nesciunt obcaecati
+                        fugiat
+                        tempore temporibus eos corporis, molestias dolorem, repellat quibusdam porro alias aspernatur
+                        nisi.
+                    </p>
+                </div>
+
+                <a href="#" target="_blank"><button class="btn">Join Now</button></a>
+            </div>
+
+            <div class="login_form">
+                <form>
+                    <h1>Login</h1>
+                    <input type="text" placeholder="username@gmail.com">
+                    <input type="password" placeholder="Enter your Password">
+                    <a href="#" target="_blank"><button class="btn">Login</button></a>
+                    <a id="registered" href="#" target="_blank">already registered?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

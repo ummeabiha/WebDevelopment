@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "JavaScript",
+			"path": "."
+		},
+		{
+			"name": "Web Development",
+			"path": "../Web Development"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "JavaScript"
+	}
+}

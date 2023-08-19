@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decryption</title>
+    <button onclick="Encryption()">Decrypt</button>
+    <button onclick="Sum()">Even Sum</button>
+</head>
+
+<body>
+    <script>
+        let Swap = (digitsSwap) => {
+            var temp = digitsSwap[0];
+            digitsSwap[0] = digitsSwap[2];
+            digitsSwap[2] = temp;
+
+            temp = digitsSwap[1];
+            digitsSwap[1] = digitsSwap[3];
+            digitsSwap[3] = temp;
+        };
+
+        let Encryption = () => {
+            var userInput = prompt("Enter four-digit integer");
+
+            if (isNaN(parseInt(userInput)) && userInput.length != 4) {
+                document.write("Invalid Input");
+            }
+            const digits = Array.from(userInput, Number);
+            const digitsEnc = [];
+
+            for (let i = 0; i < userInput.length; i++) {
+                digitsEnc.push(parseInt(digits[i]) + 7);
+            }
+
+            Swap(digitsEnc);
+
+            const textEnc = [digitsEnc[0], digitsEnc[1], digitsEnc[2], digitsEnc[3]];
+            let textEncdiv=document.createElement('div');
+            textEncdiv.innerText="Encryption of " + userInput + " is: " + textEnc.join('');
+            document.body.appendChild(textEncdiv);
+
+
+            let Decryption = () => {
+                Swap(textEnc);
+                
+                const digitsDec = [];
+                for (var i = 0; i < textEnc.length; i++) {
+                    digitsDec.push(parseInt(textEnc[i]) - 7);
+                }
+
+                let textDecdiv=document.createElement('div');
+                textDecdiv.innerText="Decryption of " + digitsEnc.join('') + " is: " + digitsDec.join('');
+                document.body.appendChild(textDecdiv);
+            };
+
+            Decryption();
+        };
+
+
+        function Sum(){
+            let sum=0;
+            for(var i=2; i<=100; i++){
+                if (i%2==0){
+                    sum+=i;
+                }
+            }
+
+            let sumdiv=document.createElement('div');
+            sumdiv.innerText="Sum of Even Integers from 2 to 100 is "+sum;
+            document.body.appendChild(sumdiv);
+        }
+
+
+    </script>
+</body>
+
+</html>

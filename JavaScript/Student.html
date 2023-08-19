@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        class student {
+            constructor(sid, sname, address, gpa) {
+                this.sid = sid;
+                this.sname = sname;
+                this.address = address;
+                this.gpa = gpa;
+            }
+
+            getid() {
+                return this.sid;
+            }
+
+            setid(id) {
+                this.sid = id;
+            }
+
+            display() {
+                document.write("You have taken admission in NED SE")
+            }
+
+            showdata() {
+                return "<br>" + this.sid + "<br>" + this.name + "<br>" + this.address + "<br>" + this.gpa + "<br>";
+            }
+        }
+
+        class postgradStu extends student {
+            constructor(sid, sname, address, gpa, specializedfield) {
+                super(sid, name, address, gpa);
+                this.specializedfield = specializedfield;
+            }
+
+            getspecializedfield() {
+                return this.specializedfield;
+            }
+
+            setspecializedfield(field) {
+                this.specializedfield = field;
+            }
+
+            show() {
+                return this.showdata() + "<br>" + this.specializedfield();
+            }
+        }
+
+        const student1 = new student(14, 'Abiha', 'Karachi', 3.73);
+        student1.display();
+        document.write(student1.showdata());
+
+        const student2 = new postgradStu(12, 'Sara', 'Karachi', 3.8, 'Data Science');
+        document.write(student2.show());
+
+    </script>
+
+</body>
+
+</html>

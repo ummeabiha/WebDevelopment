@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fact() {
+            let f = 1;
+            let no = parseInt(document.getElementById("tn").value);
+            for (i = 1; i <= no; i++) {
+                f += f * i;
+            }
+            return f;
+            // window.alert("The factorial of a number is "+f);
+        }
+
+        function table() {
+            let tno = parseInt(document.getElementById("tn").value);
+            let tra = parseInt(document.getElementById("tr").value);
+
+            for (i = 1; i <= tra; i++) {
+                document.write(tno + " * " + i + " = " + tno * i + "<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p><input type="number" placeholder="Enter Number" id="tn"></p><br>
+    <p><input type="number" placeholder="Enter Range" id="tr"></p><br>
+    <button style="background-color:rgb(250, 149, 149)" onclick="table()">Table Generator</button>
+    <button style="background-color:rgb(250, 149, 149)" onclick="fact()">Factorial</button>
+
+    <script>
+        for (i = 1; i <= 10; i++) {
+            document.write("The factorial of " + i + " = " + fact(i) + "<br>")
+        }
+    </script>
+</body>
+
+</html>

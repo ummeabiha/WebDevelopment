@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+</head>
+
+<body bgcolor= "lightgrey">
+
+    <table border="5" cellspacing="2px" cellpadding="5px" style="background-color: #ADD8F6; border: 5px solid #061a26">
+
+        <tr>
+            <th colspan=2 style="color:#061a26; font-size: larger;"> CONTINENTAL HOTEL RESERVATION FORM </th>
+        </tr>
+
+
+        <tr>
+            <th> Name </th>
+            <td><input type="text" placeholder="Enter Your Name"></td>
+        </tr>
+
+        <tr>
+            <th> Profile Image </th>
+            <td><img src= "../images\Resturant.jpg" width=150 height=150>&nbsp;&nbsp;
+                <input type="file" name="profileimage" value="Upload Image"></td>
+        </tr>
+
+        <tr>
+            <th> Email </th>
+            <td><input type="email" name="email" placeholder="info@continental.pk"> </td>
+        </tr>
+
+        <tr>
+            <th> Mobile Number </th>
+            <td><input type="number" name="contactno" placeholder="Enter Your Cell Number"> </td>
+        </tr>
+
+        <tr>
+            <th> Arrival </th>
+            <td><input type="time" name="arrivaltime" placeholder="Enter Your Arrival Time">
+            <input type="date" placeholder="Enter Your Arrival Date"></td>
+        </tr>
+
+        <tr>
+            <th> Departure </th>
+            <td><input type="time" placeholder="Enter Your Departure Time">
+            <input type="date" placeholder="Enter Your Departure Date"></td>
+        </tr>
+
+        <tr>
+            <th> Room Type </th>
+            <td>
+                <input type="radio" name="r1" value="Single"> Single
+                <input type="radio" name="r1" value="Double"> Double <br>
+                <input type="radio" name="r1" value="Presidential Suite"> Presidential Suite <br>
+            </td>
+        </tr>
+
+        <tr>
+            <th> Preferences </th>
+            <td>
+                <input type="checkbox" name="p1" value="Non-Smoking"> Non-Smoking <br>
+                <input type="checkbox" name="p1" value="Internet"> Internet <br>
+                <input type="checkbox" name="p1" value="Firm Mattress"> Firm Mattress <br>
+            </td>
+        </tr>
+
+        <tr>
+            <th> Mode of Payment </th>
+            <td>
+                <input type="checkbox" name="m1" value="Cash"> Cash
+                <input type="checkbox" name="m2" value="Cheque"> Cheque <br>
+                <input type="checkbox" name="m3" value="Credit Card"> Credit Card &nbsp;&nbsp;
+                <input type="button" name="Select Card" value="Select Card"> <br>
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="2"><input type="button" name="Send Data" value="Send Data"><br></th>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

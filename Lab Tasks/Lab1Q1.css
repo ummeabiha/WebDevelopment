@@ -1,0 +1,128 @@
+a,
+a:link,
+a:visited {
+    color: #7ce6e2;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    padding: 6px;
+    background-color: #052437;
+    margin-top: 0px;
+}
+
+h3 {
+    padding-left: 40px;
+}
+
+#container {
+    color: whitesmoke;
+    width: 1200px;
+    height: 1430px;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    border: 4px solid #ADD8F6;
+}
+
+#head {
+    position: relative;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #061a26;
+}
+
+#profileimage {
+    position: relative;
+    width: 175px;
+    height: 185px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    margin-top: -6px;
+    margin-left: 44px;
+    border: 3px solid#7ce6e2c9;
+}
+
+#intro {
+    float: right;
+    border: 2px solid #7ce6e2c9;
+    background-color: #061a26;
+    width: 900px;
+    height: 160px;
+    font-size: 14px;
+    text-align: center;
+    border-style: dashed;
+    margin-right: 44px;
+    margin-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 7px;
+}
+
+#personalinfo {
+    background-color: #052437;
+    margin: auto;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+#main {
+    float: right;
+    background-color: #042f4a;
+    width: 970px;
+    height: 1110px;
+}
+
+#sidebar {
+    float: left;
+    background-color: #03324fe4;
+    width: 230px;
+    height: 1110px;
+    color: whitesmoke;
+}
+
+#course {
+    box-shadow: 0px 3px 10px 0px;
+    float: right;
+    width: 400px;
+    height: fit-content;
+    color: black;
+    background-color: #ADD8F6;
+    padding: 2px;
+    margin-top: 15px;
+    margin-right: 22px;
+    padding-bottom: 14px;
+}
+
+.contentbox {
+    box-shadow: 0px 3px 10px 0px;
+    float: left;
+    width: 500px;
+    margin: auto;
+    height: auto;
+    color: black;
+    background-color:  #ADD8F6;
+    padding: 1px;
+    margin-top: 15px;
+    margin-left: 22px;
+}
+
+.sidecontentbox {
+    box-shadow: 0px 3px 10px 0px;
+    float: left;
+    width: 200px;
+    margin: auto;
+    height: auto;
+    color: black;
+    background-color: #ADD8F6;
+    margin-top: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 1.8px;
+}

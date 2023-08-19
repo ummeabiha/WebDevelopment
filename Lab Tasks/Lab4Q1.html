@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+        .parent{
+            display:grid;
+            background-color: #2a2a2a;
+            color: black;
+            font-weight: 500;
+            width:80%;
+            text-align: center;
+            margin: 40px auto;
+            grid-template-rows: 60px 100px 200px 60px;
+            grid-template-columns: repeat(3,1fr) 100px;
+            gap:20px;
+            padding: 20px;
+        }
+
+        #child1, #child7{
+            background-color: rgb(251, 172, 138);
+            grid-column: 1/5;
+        }
+
+        #child2{
+            background-color: rgb(249, 196, 98);
+        }
+        #child3{
+            background-color: #aaf9a7;
+        }
+        #child4{
+            background-color: rgb(250, 175, 201);
+        }
+        #child5{
+            background-color: rgb(247, 244, 100);
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+        #child6{
+            background-color: rgb(227, 181, 236);
+            grid-column: 1/4;
+        }
+
+    </style>
+</head>
+<html>
+<body>
+    <div class="parent">
+        <div id="child1">Header</div>
+        <div id="child2">Box1</div>
+        <div id="child3">Box2</div>
+        <div id="child4">Box3</div>
+        <div id="child5">Siderbar</div>
+        <div id="child6">Content</div>
+        <div id="child7">Footer</div>
+    </div>
+</body>
+</html>

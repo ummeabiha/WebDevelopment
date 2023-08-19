@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function over() {
+            // document.getElementById("hi").createTextNode("Mouse Over");
+            // document.getElementById("hi").createTextNode("Mouse Over");
+            document.getElementById("hi").innerHTML="Mouse Over";
+            // document.write("HI");
+        }
+        function out() {
+            document.getElementById("hi").innerHTML="Mouse Out";
+            // document.write("Mouse Out");
+        }
+    </script>
+</head>
+
+<body>
+    <p>Bring your mouse inside the division to see the result:</p>
+    <div onmouseover="over()" onmouseout="out()" style="height: fit-content; background-color: tomato;">
+        <h2> This is inside the division </h2>
+    </div>
+
+    <p id="hi"></p>
+
+</body>
+
+</html>

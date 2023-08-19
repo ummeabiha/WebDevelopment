@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box</title>
+    <style>
+        .parent {
+            background-color: rgb(19, 59, 59);
+            color: black;
+            width: 90%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            gap:15px;
+        }
+
+        #head,
+        #foot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            height:40px;
+            background-color: rgb(251, 172, 138);
+        }
+
+        #main-body{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            width:95%;
+            gap:3%;  
+        }
+
+        #aside {
+            background-color: #aaf9a7;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #article {
+            width: 70%;
+            background-color: rgb(249, 196, 98);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 0px;
+        }
+
+        #article-child {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #child1,
+        #child2,
+        #child3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            background-color: rgb(247, 244, 100);
+        }
+    </style>
+
+</head>
+<html>
+<body>
+    <div class="parent">
+        <div id="head">Header</div>
+
+        <div id="main-body">
+            <div id="aside">Aside</div>
+            <div id="article">Article
+                <div id="article-child">
+                    <div id="child1">Image</div>
+                    <div id="child2">Image</div>
+                    <div id="child3">Image</div>
+                </div>
+            </div>
+        </div>
+        <div id="foot">Footer</div>
+    </div>
+</body>
+
+</html>

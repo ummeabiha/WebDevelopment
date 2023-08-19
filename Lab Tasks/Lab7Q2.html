@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Room {
+            constructor(length, breadth, height) {
+                this.length = length;
+                this.breadth = breadth;
+                this.height = height;
+            }
+
+            calculateArea() {
+                document.write (2 * ((this.length * this.breadth) + (this.breadth * this.height) + (this.height * this.length)));
+            }
+
+            calculateVolume() {
+                document.write ("<br>"+this.length * this.breadth * this.height);
+            }
+        }
+
+        var r = new Room(2, 4, 6);
+        r.calculateArea();
+        r.calculateVolume();
+    </script>
+
+</body>
+
+</html>

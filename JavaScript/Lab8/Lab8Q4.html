@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Fan{
+            constructor(speed, type, company){
+                this.speed=speed;
+                this.type=type;
+                this.company=company;
+            }
+
+            show(){
+                return('Speed: '+this.speed+'\nType: '+this.type+'\nCompany: '+this.company)
+            }
+        };
+
+        class RoomCooler extends Fan{
+            constructor(speed, type, company, size, turboCooling){
+                super(speed, type, company);
+                this.size=size;
+                this.turboCooling=turboCooling;
+            }
+
+            showData(){
+                return(this.show()+'\nSize: '+this.size+'\nTurbo Cooling: '+this.turboCooling);
+            }
+        };
+
+        const r= new RoomCooler('50m/hr','Cooler','Dawlance', '3ft', true);
+        console.log(r.showData());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

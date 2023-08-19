@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption</title>
+    <button onclick="Encryption()">Encrypt</button>
+</head>
+
+<body>
+    <script>
+        let Encryption = () => {
+            var userInput = prompt("Enter four-digit integer");
+
+            if (isNaN(parseInt(userInput)) && userInput.length != 4) {
+                document.write("Invalid Input");
+            }
+            const digits = Array.from(userInput, Number);
+            const digitsEnc = [];
+
+            for (let i = 0; i < userInput.length; i++) {
+                digitsEnc.push(parseInt(digits[i]) + 7);
+            }
+
+            var temp = digitsEnc[0];
+            digitsEnc[0] = digitsEnc[2];
+            digitsEnc[2] = temp;
+
+            temp = digitsEnc[1];
+            digitsEnc[1] = digitsEnc[3];
+            digitsEnc[3] = temp;
+            
+            document.write("Encryption of " + userInput + " is: " + digitsEnc[0] + digitsEnc[1] + digitsEnc[2] + digitsEnc[3]);
+        };
+    </script>
+
+</body>
+
+</html>
